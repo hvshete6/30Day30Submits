@@ -25,6 +25,16 @@
       <input type="checkbox" id="switcher" />
       <label for="switcher">Switch</label>
     </div>
-    <script src="./main.js"></script>
+    <script>
+      const input = document.querySelector(".theme-switcher input");
+
+input.addEventListener("change", (e) => {
+  if (e.target.checked) {
+    document.body.setAttribute("data-theme", "dark");
+  } else {
+    document.body.setAttribute("data-theme", "light");
+  }
+});
+    </script>
   </body>
 </html>
